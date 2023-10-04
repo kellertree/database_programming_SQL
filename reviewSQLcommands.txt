@@ -1,0 +1,191 @@
+This is a list of basic SQL commands.
+
+-----------------------------------------------------------
+Description: SELECT: Retrieve data from one or more tables.
+
+Code:
+
+SELECT column1, column2 FROM table_name WHERE condition;
+
+-----------------------------------------------------------
+
+Description: INSERT:Add new records to a table
+
+Code:
+
+INSERT INTO table_name (column1, column2) VALUES (value1, value2);
+
+-----------------------------------------------------------
+
+Description: UPDATE: Modify existing records in a table.
+
+Code:
+
+UPDATE table_name SET column1 = value1 WHERE condition;
+
+-----------------------------------------------------------
+
+Description: DELETE: Remove records from a table.
+
+Code:
+
+DELETE FROM table_name WHERE condition;
+
+-----------------------------------------------------------
+
+Description: CREATE TABLE: Create a new table
+
+Code:
+
+CREATE TABLE table_name (
+	column1 datatype,
+	column2 datatype,
+	...
+);
+
+-----------------------------------------------------------
+
+Description: ALTER TABLE: Modify an existing tbale (e.g., add, modify, or delete columns).
+
+code:
+
+code (ADD):
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+code (MODIFY):
+
+ALTER TABLE table_name
+MODIFY column_name datatype;
+
+code (DROP COLUMN):
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+
+-----------------------------------------------------------
+
+Description: DROP TABLE: Delete a table and all its data.
+
+code:
+
+DROP TABLE table_name;
+
+-----------------------------------------------------------
+
+Description: CREATE DATABASE: Create a new database
+
+code:
+
+CREATE DATABASE database_name;
+
+-----------------------------------------------------------
+
+Description: USE DATABASE: Select a specific databsae for use.
+
+code:
+
+USE database_name
+
+
+-----------------------------------------------------------
+
+Description: ALTER DATABASE: Modify database properties.
+
+code:
+
+ALTER DATABASE database_name
+SET parameter = value;
+
+-----------------------------------------------------------
+
+Description: DROP DATABASE: Delete a database and all its tables.
+
+code:
+
+DROP DATABASE database_name;
+
+-----------------------------------------------------------
+
+Description: CREATE INDEX: Create an index on a table to improve performance.
+
+code:
+
+CREATE INDEX index_name ON table_name (column1, column2, ...);
+
+-----------------------------------------------------------
+
+Description: DROP INDEX: Remove an existing index.
+
+code:
+
+DROP INDEX index_name ON table_name;
+
+-----------------------------------------------------------
+
+Description: TRUNCATE TABLE: Remove all records from a table (faster than DELETE)
+
+code:
+
+TRUNCATE TABLE table_name;
+
+-----------------------------------------------------------
+
+Description: GRANT: Give privileges to users or roles.
+
+code:
+
+GRANT permission ON object TO user;
+
+-----------------------------------------------------------
+
+Description: REVOKE: Remove privileges from users or roles.
+
+code:
+
+REVOKE permission ON object FROM user;
+
+-----------------------------------------------------------
+
+Description: JOIN: Combine rows from two or more tbales based on a related column.
+
+code:
+
+SELECT columns FROM table1
+JOIN table2 ON table1.column = table2.column;
+
+-----------------------------------------------------------
+
+Description: UNION: Combine sthe result sets of two or more SELECT statements.
+
+code:
+
+SELECT column1 FROM table1
+UNION
+SELECT column1 FROM table2;
+
+
+-----------------------------------------------------------
+
+
+SELECT, INSERT, UPDATE, DELETE: These are core SQL commands and are supported in MySQL.
+
+CREATE TABLE, ALTER TABLE, DROP TABLE: These are standard SQL commands and are supported in MySQL.
+
+CREATE DATABASE, USE DATABASE, ALTER DATABASE, DROP DATABASE: MySQL supports these database-related commands, although the syntax can vary slightly compared to other database management systems.
+
+CREATE INDEX, DROP INDEX: These commands are supported in MySQL for managing indexes.
+
+TRUNCATE TABLE: MySQL supports this command to quickly delete all records from a table.
+
+GRANT, REVOKE: MySQL supports these commands for managing user privileges.
+
+JOIN, UNION: MySQL supports various types of joins (e.g., INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN) and the UNION operation for combining result sets.
+
+
+
+
+
+
