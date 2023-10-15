@@ -1,0 +1,41 @@
+SQL join operations are used to combine rows from two or more tables based on a related column between them. Join operations are a fundamental aspect of SQL when you need to retrieve data from multiple tables in a relational database. There are several types of joins in SQL:
+
+1. INNER JOIN:
+   - Returns only the rows that have matching values in both tables.
+   - Syntax: `SELECT columns FROM table1 INNER JOIN table2 ON table1.column = table2.column;`
+
+2. LEFT JOIN (or LEFT OUTER JOIN):
+   - Returns all rows from the left table (table1) and the matched rows from the right table (table2).
+   - If there are no matches in the right table, NULL values are returned.
+   - Syntax: `SELECT columns FROM table1 LEFT JOIN table2 ON table1.column = table2.column;`
+
+3. RIGHT JOIN (or RIGHT OUTER JOIN):
+   - Returns all rows from the right table (table2) and the matched rows from the left table (table1).
+   - If there are no matches in the left table, NULL values are returned.
+   - Syntax: `SELECT columns FROM table1 RIGHT JOIN table2 ON table1.column = table2.column;`
+
+4. FULL JOIN (or FULL OUTER JOIN):
+   - Returns all rows when there is a match in either the left or right table.
+   - If there is no match, NULL values are returned for columns from the non-matching table.
+   - Syntax: `SELECT columns FROM table1 FULL JOIN table2 ON table1.column = table2.column;`
+
+5. CROSS JOIN:
+   - Returns the Cartesian product of two tables, i.e., all possible combinations of rows from both tables.
+   - Syntax: `SELECT columns FROM table1 CROSS JOIN table2;`
+
+6. SELF JOIN:
+   - A self-join is used to combine rows from a single table.
+   - It is useful when you have a table with a hierarchical structure, such as employees and managers.
+   - Syntax: `SELECT columns FROM table AS t1 INNER JOIN table AS t2 ON t1.column = t2.column;`
+
+Here's an example of an INNER JOIN in SQL:
+
+```sql
+SELECT employees.employee_name, departments.department_name
+FROM employees
+INNER JOIN departments ON employees.department_id = departments.department_id;
+```
+
+In this example, the query retrieves the names of employees and the names of the departments they belong to by matching the `department_id` column in both the `employees` and `departments` tables using an INNER JOIN.
+
+The choice of which type of join to use depends on the specific requirements of your query and the relationships between the tables in your database. Each type of join serves a different purpose and can help you retrieve the data you need effectively.
