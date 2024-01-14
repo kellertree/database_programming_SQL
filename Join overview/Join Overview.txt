@@ -1,0 +1,125 @@
+Join Overview
+
+After this section you will be able to:
+- Define the join operator
+- Explain the role of primary keys and foreign keys in a join operation.
+- List different types of join operators
+
+
+A simple select statement retrieves data from one or more columns from a single table.
+
+The next level of complexity is retrieving data from two or more tables.
+
+This leads to multiple possibilities of how the Result Set is generated.
+
+To combine data from two tables. We use the JOIN operator.
+
+JOIN operator:
+
+- Combines rows from two or more tables
+- Based on a relationship
+
+A JOIN combines the rows from two or more tables based on a relationship between certain columns in these tables.
+
+-----------------------------------------------
+
+INNER JOIN operator
+
+- Describe inner joins
+- Explain when to use an inner join
+- Describe the syntax of the INNER JOIN statement
+
+
+- Join operations combine the rows from two or more tables.
+- Inner join displays matches only
+-----------------------------------------------
+Example
+
+Syntax:
+
+SELECT B.BORROWER_ID, B.LASTNAME, B.COUNTRY, 	L.BORROWER_ID, L.LOAN_DATE
+FROM BORROW B INNER JOIN LOAN L
+	ON B.BORROWER_ID = L.BORROWER_ID
+
+NOTE: 
+
+- In this example, the Borrower table is the left table.
+
+- Each column name is prefixed with an alias to indicate which table each column is associated with
+----------------------------------------------
+
+
+Inner joins return only rows from joined tables that have a matching value in a common column.
+
+Rows that do not have a matching value do not appear in the result.
+
+------------------------------------------------
+
+Outer Joins
+
+In this section we learn how to:
+- Describe left outer joins, right outer joins, and full out joins.
+- Explain when to use each type of outer join.
+- Describe the syntax of the OUTER JOIN statement.
+
+------------------------------------------------
+
+Outer joins, like inner joins, return the rows from each table that have matching values in the join columns.
+
+Unlike inner joins, outer joins also return the rows that do not have a match between the tables.
+
+SQL offers you three types of outer joins:
+left outer join, right outer join and full outer join.
+
+In a left outer join, all the rows from the first (left side) table are included, and only the matching rows from the second (rightside) table are included.
+
+In this diagram, a left join matches all the rows from the left table and combines information with rows from the right table that match the criteria specified in the query.
+
+-------------------------------------------------
+Left Outer Join
+
+All rows from the left table & any matching rows from the right table.
+
+Right Outer Join
+
+All rows from the right table & any matching rows from the left table.
+
+Full Outer Join
+
+All rows from both tables.
+
+-----------------------------------------------
+
+Example syntax for left join:
+
+SELECT B.BORROWS_ID, B.LASTNAME, B.COUNTRY,
+       L.BORROWER_ID, L.LOAN_DATE
+FROM BORROWER B LEFT JOIN LOAN L
+      ON B.BORROWER_ID = L.BORROWER ID
+
+--------------------------------------------------
+
+Example syntax for right join:
+
+SELECT B.BORROWS_ID, B.LASTNAME, B.COUNTRY,
+       L.BORROWER_ID, L.LOAN_DATE
+FROM BORROWER B RIGHT JOIN LOAN L
+      ON B.BORROWER_ID = L.BORROWER ID
+
+--------------------------------------------------
+
+Example syntax for full join:
+
+SELECT B.BORROWS_ID, B.LASTNAME, B.COUNTRY,
+       L.BORROWER_ID, L.LOAN_DATE
+FROM BORROWER B FULL JOIN LOAN L
+      ON B.BORROWER_ID = L.BORROWER ID
+--------------------------------------------------
+
+In this section you learned that:
+
+- Left outer joins return all rows from the left table, and all the rows from the right table that have a match.
+
+- Right outer joins return all rows from the right table, and all the rows from the left that have a match.
+
+- Full outer joins return all rows from both tables and all the rows from both tables that don't have a match.
