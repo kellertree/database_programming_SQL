@@ -1,0 +1,55 @@
+Using Joins / SQL Join Basics
+
+This video assumes you can already use simple queries like:
+--------------------------------------------
+SELECT id, name
+FROM subject
+WHERE faculty = 'Math';
+--------------------------------------------
+
+In relational databases we often want to retrieve information from more than one table. Imagine that you have two tables subject and lecturer.
+
+If we want to merge together the information from the two tables we have to use a coenpt known as a JOIN.
+
+
+
+Normally when you query a single table you simply provide its name in the FROM clause.
+
+SELECT (...)
+FROM subject;
+
+Now we will need to extend the FROM clause to include two tables, using the JOIN keyword. But this is not enough, the database needs to know how to join the two tables.
+
+
+SELECT (...)
+FROM subject JOIN lecturer ON subject.lecturer_id = lecturer.id;l
+
+
+Example:
+
+SELECT name, first_name, last_name
+FROM subject JOIN lecturer ON subject.lecturer_id = lecturer.id;
+
+We can also rename the column using the keyword AS.
+
+SELECT name AS subject_name, first_name 
+AS lecturer_first_name, last_name 
+AS lectuer_last_name
+FROM subjectJOIN lecturer ON subject.lectuer_id = lectuer.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

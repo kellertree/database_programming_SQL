@@ -1,0 +1,41 @@
+A database is as tructured set of data stored in a computer.
+
+- provide quick search capabilities
+- data validation
+- parallel access
+- computation and aggregation
+- access control
+
+Relational and non-relation databases
+we focus only on relational database in this video.
+
+Relational databases
+- Microsoft SQL Server
+- Oracle
+- PostgreSQL
+- MySQL
+
+Non-relational databases
+- mongoDB
+- redis
+- cassandra
+
+In relational databases information is stored in tables, and one table represents one concept.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
