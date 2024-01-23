@@ -1,0 +1,2 @@
+The SELECT operation in SQL can be broken down into three smaller operations, which will be refferred to in the textbook as the SELECT statement, SELECT expression, and the SELECT query. (breaking it down in this matter makes it far easier to understand and appreciate its complexity.)
+
